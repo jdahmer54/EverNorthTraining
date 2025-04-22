@@ -30,5 +30,8 @@ columns:
     data_type: int
   - name: currencykey
     data_type: int
+  - name: Tax_Rate
+    data_type: decimal
+    sql: 'round((taxamt/salesamount) :: numeric,4)'
 connection_id: con_atscale_public
 table: factinternetsales
